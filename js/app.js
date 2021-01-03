@@ -55,3 +55,14 @@
 // Set sections as active
 
 
+
+const sections = document.getElementsByTagName("section");
+
+for (let i = 0; i < sections.length; i++){
+    const ul = document.getElementById("navbar__list");
+    const li = document.createElement("li");
+    li.setAttribute("id", i);
+    li.innerHTML = "<a href=" + `#section${i +1}` + ">" + `section${i+1}` + '&nbsp;' + '&nbsp;' +"</a>";
+    li.style.color = "black";
+    ul.append(li);
+}
